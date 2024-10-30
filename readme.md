@@ -1,3 +1,7 @@
+This web page contains an IFrame pointing to a youtube playlist comprised of scary or halloween related videos, to be used as a background for displays for halloween parties, below are some instructions on how to make the most of it with a mini desktop running windows. The reason I created an IFrame to serve this instead of playing the playlist on the display is because you get more control over certain properties through youtube embedded Iframes. 
+
+
+- Enable auto-login on windows
 - On windows desktop create a new shortcut
 - use the following, which will open it up in fullscreen kiosk mode 
 "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --kiosk "https://h.angs.dev/"
