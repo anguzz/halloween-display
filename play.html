@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fullscreen YouTube Video on Startup</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLklPQSyMHLfjor72GKopHvPBxAIOyAKar&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) { /* Firefox /
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) { / Chrome, Safari & Opera /
+      document.documentElement.webkitRequestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) { / IE/Edge */
+      document.documentElement.msRequestFullscreen();
+    }
+  });
+</script>
+</body>
+</html>
