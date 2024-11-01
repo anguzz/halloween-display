@@ -12,5 +12,12 @@ This web page contains an IFrame pointing to a youtube playlist comprised of sca
 - This should autorun the website, which points to that youtube playlist in fullscreen allowing you to use it as a background for displays for parties or just a general display
   - To make the most of this install an adblocker like Ublock plus something to remove Youtube recommended videos like ``` Unhook Youtube``` to remove next video suggestions and ads.
 
+Now we have to disable "Restore pages" popup that occurs incase the device loses power or is unplugged, otherwise this popup will make the display exit fullscreeen regardless of startup.
+- Open `C:\Users\[username]\AppData\Local\Microsoft\Edge\User Data\Default\Preferencees` with notepad or any text editor.
+- Ctrl+F `exit_value` and change the value from `Crashed` to `none`. Then save and exit notepad
+- Lastly edit the Preferences file and change it to read only under properties so MS-edge does not overwrite this with future updates 
+
+
+
 Worth mentioning: It's possible to just run the file locally as an HTML file and point to it but youtube will not allow Iframes to play certain videos due to their referrer policy, or the owner disabling embedded sharing, I tried with different referrer policies but had no luck.
 I think it's because the site being run locally does not have HTTPS enabled so it prevents videos from playing so the display will stop on any video with the issue, to get around this I deployed it to my own domain 
